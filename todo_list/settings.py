@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p2@1gxx45t8y)6vmq22nbzxn=4mhawb_l9(*1d0xf8(a$bx5k3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','kimbeta-todo-list.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -119,6 +119,9 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
